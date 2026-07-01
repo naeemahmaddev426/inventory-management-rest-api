@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Interfaces\AuthRepositoryInterface;
 use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Requests\Auth\LoginRequest;
 
 class AuthService
 {
@@ -14,5 +15,9 @@ class AuthService
     public function register(RegisterRequest $request)
     {
         return $this->authRepository->register($request);
+    }
+    public function login(LoginRequest $request)
+    {
+        return $this->authRepository->login($request);
     }
 }
