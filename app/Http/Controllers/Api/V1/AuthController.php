@@ -9,6 +9,8 @@ use App\Services\AuthService;
 use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\Request;
 use App\Http\Requests\Auth\ChangePasswordRequest;
+use App\Http\Requests\Auth\ForgotPasswordRequest;
+use App\Http\Requests\Auth\ResetPasswordRequest;
 
 class AuthController extends Controller
 {
@@ -69,4 +71,25 @@ class AuthController extends Controller
         'message' => 'Password changed successfully.'
     ]);
 }
+public function forgotPassword(ForgotPasswordRequest $request)
+{
+    $this->authService->forgotPassword($request);
+
+    return response()->json([
+        'success' => true,
+        'message' => 'Password reset link sent successfully.',
+    ]);
+}
+public function resetPassword(ResetPasswordRequest $request)
+    {
+        $this->authService->resetPassword($request);
+
+        return response()->json([
+
+            'success' => true,
+
+            'message' => 'Password reset successfully.'
+
+        ]);
+    }
 }

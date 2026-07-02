@@ -8,6 +8,7 @@ use App\Http\Requests\Auth\RegisterRequest;
 use App\Interfaces\AuthRepositoryInterface;
 use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Password;
 
 class AuthRepository implements AuthRepositoryInterface
 {
@@ -57,6 +58,42 @@ class AuthRepository implements AuthRepositoryInterface
 
     return true;
 }
+public function forgotPassword(array $data)
+{
+    $status = Password::sendResetLink([
+        'email' => $data['email'],
+    ]);
 
+    if ($status !== Password::RESET_LINK_SENT) {
+        throw ValidationException::withMessages([
+            'email' => [__($status)],
+        ]);
+    }
+
+    return true;
+}
+public function resetPassword(array $data)
+{
+    $status = Password::reset(
+        $data,
+        function ($user, $password) {
+
+            $user->forceFill([
+                'password' => Hash::make($password),
+            ])->save();
+
+        }
+    );
+
+    if ($status !== Password::PASSWORD_RESET) {
+
+        throw ValidationException::withMessages([
+            'email' => [__($status)],
+        ]);
+
+    }
+
+    return true;
+}
 }
             

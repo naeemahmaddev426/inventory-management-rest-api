@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\ResetPasswordController;
 
 Route::get('/', function () {
     return response()->json([
@@ -9,3 +10,6 @@ Route::get('/', function () {
         'status' => 'Running Successfully'
     ]);
 });
+
+Route::get('/reset-password', [ResetPasswordController::class, 'index'])
+    ->name('password.reset');

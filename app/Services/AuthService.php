@@ -30,4 +30,16 @@ class AuthService
             $request->validated()
         );
     }
+    public function forgotPassword($request)
+    {
+        return $this->authRepository->forgotPassword(
+            $request->validated()
+        );
+    }
+    public function resetPassword($request)
+    {
+        return $this->authRepository->resetPassword(
+            $request->validated()
+        );
+    }
 }

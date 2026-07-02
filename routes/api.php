@@ -10,12 +10,14 @@ Route::prefix('v1')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
 
     Route::apiResource('categories', CategoryController::class);
-
+    Route::post('/forgot-password', [AuthController::class, 'forgotPassword']);
+    Route::post('/reset-password',[AuthController::class, 'resetPassword']);
     Route::middleware('auth:sanctum')->group(function () {
 
         Route::post('/logout', [AuthController::class, 'logout']);
         Route::get('/profile', [AuthController::class, 'profile']);
         Route::put('/change-password',[AuthController::class,'changePassword']);
+        
     });
 
 });
