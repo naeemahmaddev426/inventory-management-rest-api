@@ -20,4 +20,14 @@ class AuthService
     {
         return $this->authRepository->login($request);
     }
+    public function logout($request)
+    {
+        return $this->authRepository->logout($request);
+    }
+    public function changePassword($request)
+    {
+        return $this->authRepository->changePassword(
+            $request->validated()
+        );
+    }
 }

@@ -8,12 +8,15 @@ use App\Http\Resources\UserResource;
 use App\Services\AuthService;
 use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\Request;
+use App\Http\Requests\Auth\ChangePasswordRequest;
 
 class AuthController extends Controller
 {
      public function __construct(
         protected AuthService $authService
-    ) {}
+    ) {
+
+    }
 
     public function register(RegisterRequest $request)
     {
@@ -45,6 +48,25 @@ class AuthController extends Controller
     return response()->json([
         'success' => true,
         'user' => new UserResource($request->user())
+    ]);
+}
+
+    public function logout(Request $request)
+    {
+        $this->authService->logout($request);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Logout successful.'
+        ]);
+    }
+    public function changePassword(ChangePasswordRequest $request)
+{
+    $this->authService->changePassword($request);
+
+    return response()->json([
+        'success' => true,
+        'message' => 'Password changed successfully.'
     ]);
 }
 }

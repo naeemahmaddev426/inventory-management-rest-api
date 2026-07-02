@@ -9,4 +9,6 @@ interface AuthRepositoryInterface
 {
     public function register(RegisterRequest $request);
     public function login(LoginRequest $request);
+    public function logout($request);
+    public function changePassword(array $data);
 }

@@ -15,8 +15,7 @@ Route::prefix('v1')->group(function () {
 
         Route::post('/logout', [AuthController::class, 'logout']);
         Route::get('/profile', [AuthController::class, 'profile']);
-        Route::get('/profile', [AuthController::class, 'profile']);
-
+        Route::put('/change-password',[AuthController::class,'changePassword']);
     });
 
 });

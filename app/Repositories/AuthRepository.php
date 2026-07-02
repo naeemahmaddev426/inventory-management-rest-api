@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Interfaces\AuthRepositoryInterface;
 use App\Http\Requests\Auth\LoginRequest;
+use Illuminate\Validation\ValidationException;
 
 class AuthRepository implements AuthRepositoryInterface
 {
@@ -35,5 +36,27 @@ class AuthRepository implements AuthRepositoryInterface
             'user' => $user
         ];
     }
+    public function logout($request)
+    {
+        $request->user()->currentAccessToken()->delete();
+    }
+    public function changePassword(array $data)
+{
+    $user = auth()->user();
+
+    if (!Hash::check($data['old_password'], $user->password)) {
+
+        throw ValidationException::withMessages([
+            'old_password' => ['Old password is incorrect.']
+        ]);
+    }
+
+    $user->update([
+        'password' => Hash::make($data['password'])
+    ]);
+
+    return true;
+}
+
 }
             
