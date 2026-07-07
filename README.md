@@ -1,13 +1,6 @@
-<p align="center">
-  <img src="./assets/banner.svg" alt="Inventory Management REST API Banner" width="100%">
-</p>
 
 <p align="center">
-  <img src="./assets/banner.svg" alt="Inventory Management REST API Banner" width="100%">
-</p>
-
-<p align="center">
-  <img src="./assets/banner.svg" alt="Inventory Management REST API Banner" width="100%">
+  <img src="public/assets/banner.svg" alt="Inventory Management REST API Banner" width="100%">
 </p>
 
 <!-- Background -->
