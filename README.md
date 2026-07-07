@@ -9,6 +9,304 @@
 
 ## About Laravel
 
+# 🚀 Inventory Management REST API
+
+![Laravel](https://img.shields.io/badge/Laravel-13.x-FF2D20?logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.4-777BB4?logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?logo=docker&logoColor=white)
+![REST API](https://img.shields.io/badge/API-REST-success)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+A production-style **Inventory Management REST API** built with **Laravel 13** following modern backend development practices including **Repository Pattern**, **Service Layer**, **Laravel Sanctum Authentication**, **API Resources**, **Form Request Validation**, and **Docker**.
+
+---
+
+# 📖 Project Overview
+
+This project is designed as an enterprise-level Inventory Management backend that provides secure REST APIs for managing inventory, products, suppliers, customers, purchases, sales, and stock management.
+
+The goal of this project is to demonstrate professional Laravel backend architecture and REST API development practices.
+
+---
+
+# ✨ Current Features
+
+## ✅ Authentication Module
+
+- User Registration
+- User Login
+- User Logout
+- Forgot Password
+- Reset Password
+- Change Password
+- Email Verification
+- Laravel Sanctum Authentication
+- Password Hashing
+- API Token Authentication
+
+---
+
+## ✅ Category Module
+
+- Create Category
+- Get All Categories
+- Get Single Category
+- Update Category
+- Delete Category
+- Pagination
+- Validation
+- API Resources
+
+---
+
+# 🚧 Upcoming Modules
+
+- Product Management
+- Brand Management
+- Supplier Management
+- Customer Management
+- Purchase Management
+- Sales Management
+- Warehouse Management
+- Stock Management
+- Reports
+- Dashboard APIs
+- Notifications
+- Roles & Permissions
+- Activity Logs
+
+---
+
+# 🛠 Tech Stack
+
+| Technology         | Version |
+| ------------------ | ------- |
+| Laravel            | 13      |
+| PHP                | 8.4     |
+| MySQL              | 8       |
+| Docker             | Latest  |
+| Laravel Sanctum    | ✔       |
+| REST API           | ✔       |
+| Repository Pattern | ✔       |
+| Service Layer      | ✔       |
+| API Resources      | ✔       |
+| Form Requests      | ✔       |
+| Git & GitHub       | ✔       |
+
+---
+
+# 📁 Project Structure
+
+```
+app
+├── Http
+│   ├── Controllers
+│   ├── Middleware
+│   ├── Requests
+│   └── Resources
+│
+├── Models
+├── Repositories
+├── Services
+├── Providers
+├── Traits
+
+database
+routes
+storage
+tests
+```
+
+---
+
+# 🏗 Architecture
+
+```
+Client
+
+   │
+
+REST API
+
+   │
+
+Controller
+
+   │
+
+Service Layer
+
+   │
+
+Repository Layer
+
+   │
+
+Eloquent Model
+
+   │
+
+MySQL Database
+```
+
+---
+
+# 🔐 Authentication Endpoints
+
+| Method | Endpoint                |
+| ------ | ----------------------- |
+| POST   | /api/v1/register        |
+| POST   | /api/v1/login           |
+| POST   | /api/v1/logout          |
+| POST   | /api/v1/forgot-password |
+| POST   | /api/v1/reset-password  |
+| POST   | /api/v1/change-password |
+| GET    | /api/v1/email/verify    |
+
+---
+
+# 📂 Category Endpoints
+
+| Method | Endpoint                |
+| ------ | ----------------------- |
+| GET    | /api/v1/categories      |
+| POST   | /api/v1/categories      |
+| GET    | /api/v1/categories/{id} |
+| PUT    | /api/v1/categories/{id} |
+| DELETE | /api/v1/categories/{id} |
+
+---
+
+# 🐳 Docker Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/naeemahmaddev426/Inventory_Management_Rest_Api.git
+```
+
+Enter the project
+
+```bash
+cd Inventory_Management_Rest_Api
+```
+
+Build Docker Containers
+
+```bash
+docker compose up --build
+```
+
+Run in background
+
+```bash
+docker compose up -d
+```
+
+---
+
+# 🌐 Application URLs
+
+Laravel API
+
+```
+http://localhost:8002
+```
+
+phpMyAdmin
+
+```
+http://localhost:8083
+```
+
+---
+
+# ⚙ Environment
+
+Copy the environment file
+
+```bash
+cp .env.example .env
+```
+
+Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+Run Migrations
+
+```bash
+php artisan migrate
+```
+
+---
+
+# 🧪 API Testing
+
+The APIs are tested using:
+
+- Postman
+- REST Client
+- JSON Responses
+
+---
+
+# 📌 Development Practices
+
+- RESTful API Standards
+- Clean Architecture
+- Repository Pattern
+- Service Layer
+- API Resource Responses
+- Request Validation
+- Secure Authentication
+- Dockerized Environment
+- Versioned APIs
+- Git Workflow
+
+---
+
+# 📈 Project Status
+
+| Module             | Status         |
+| ------------------ | -------------- |
+| Authentication     | ✅ Completed   |
+| Password Reset     | ✅ Completed   |
+| Email Verification | ✅ Completed   |
+| Category CRUD      | ✅ Completed   |
+| Product Module     | 🚧 In Progress |
+| Supplier Module    | ⏳ Planned     |
+| Customer Module    | ⏳ Planned     |
+| Purchase Module    | ⏳ Planned     |
+| Sales Module       | ⏳ Planned     |
+
+---
+
+# 👨‍💻 Author
+
+**Naeem Ahmad**
+
+Backend Laravel Developer
+
+GitHub
+
+https://github.com/naeemahmaddev426
+
+---
+
+# ⭐ Support
+
+If you like this project, don't forget to ⭐ Star this repository.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
@@ -49,7 +347,7 @@ Thank you for considering contributing to the Laravel framework! The contributio
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## Security Vulnerabiliti
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
