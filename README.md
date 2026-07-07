@@ -1,6 +1,10 @@
-# About Laravel
+<p align="center">
+  <img src="assets/banner.svg" alt="Inventory Management REST API Banner" width="100%">
+</p>
 
 # 🚀 Inventory Management REST API
+
+About Laravel
 
 ![Laravel](https://img.shields.io/badge/Laravel-13.x-FF2D20?logo=laravel&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-8.4-777BB4?logo=php&logoColor=white)
@@ -297,9 +301,6 @@ If you like this project, don't forget to star this repository.
 ## 📄 License
 
 This project is licensed under the MIT License.
-<defs></defs>
-
-    <feMerge>                            </defs>
 
 <!-- Background -->
 
