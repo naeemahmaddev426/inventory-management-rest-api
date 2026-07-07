@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\CategoryController;
+use App\Http\Controllers\Api\V1\Auth\EmailVerificationController;
 
 Route::prefix('v1')->group(function () {
 
@@ -17,7 +18,13 @@ Route::prefix('v1')->group(function () {
         Route::post('/logout', [AuthController::class, 'logout']);
         Route::get('/profile', [AuthController::class, 'profile']);
         Route::put('/change-password',[AuthController::class,'changePassword']);
+        Route::post('/email/verification-notification',[EmailVerificationController::class, 'send']);
+        Route::post('/email/resend',[EmailVerificationController::class, 'resend']);
         
     });
+     Route::get('/verify-email/{id}/{hash}', [EmailVerificationController::class, 'verify'])
+        ->middleware('signed')
+        ->name('verification.verify');
+   
 
 });
