@@ -1,8 +1,6 @@
-<svg viewBox="0 0 1600 500" xmlns="http://www.w3.org/2000/svg"></svg>
-
-<defs></defs>
-
-      <feMerge>                            </defs>
+<p align="center">
+  <img src="./assets/banner.svg" alt="Inventory Management REST API Banner" width="100%">
+</p>
 
 <p align="center">
   <img src="./assets/banner.svg" alt="Inventory Management REST API Banner" width="100%">
