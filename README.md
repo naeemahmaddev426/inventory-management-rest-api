@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+
+<p align="center">
+  <img src="./assets/banner.svg" alt="Inventory Management REST API Banner" width="100%">
+</p>
+>>>>>>> 8a0d418 (Add custom project banner)
 
 <p align="center">
   <img src="public/assets/banner.svg" alt="Inventory Management REST API Banner" width="100%">
@@ -101,24 +108,9 @@
 
 <!-- Title -->
 
-<text x="80" y="230" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#ffffff" letter-spacing="0.5">
-    Inventory Management
-  </text>
-  <text x="80" y="230" dy="62" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#FF2D20" letter-spacing="0.5">
-    REST API
-  </text>
+<h1 align="center">🚀 Inventory Management REST API</h1>
 
 <!-- Subtitle -->
-
-<text x="82" y="410" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#aab2c8" letter-spacing="0.5">
-    Enterprise Backend System
-    <tspan fill="#FF2D20" dx="10">|</tspan>
-    <tspan fill="#aab2c8" dx="10">Laravel 13</tspan>
-    <tspan fill="#FF2D20" dx="10">|</tspan>
-    <tspan fill="#aab2c8" dx="10">Docker</tspan>
-    <tspan fill="#FF2D20" dx="10">|</tspan>
-    <tspan fill="#aab2c8" dx="10">REST API</tspan>
-  </text>
 
 <!-- thin top/bottom frame lines -->
 
@@ -204,13 +196,13 @@ The goal of this project is to demonstrate professional Laravel backend architec
 | PHP                | 8.4     |
 | MySQL              | 8       |
 | Docker             | Latest  |
-| Laravel Sanctum    | ✔       |
-| REST API           | ✔       |
-| Repository Pattern | ✔       |
-| Service Layer      | ✔       |
-| API Resources      | ✔       |
-| Form Requests      | ✔       |
-| Git & GitHub       | ✔       |
+| Laravel Sanctum    | ✔      |
+| REST API           | ✔      |
+| Repository Pattern | ✔      |
+| Service Layer      | ✔      |
+| API Resources      | ✔      |
+| Form Requests      | ✔      |
+| Git & GitHub       | ✔      |
 
 ---
 

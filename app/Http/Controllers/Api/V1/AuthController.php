@@ -46,12 +46,12 @@ class AuthController extends Controller
         ]);
     }
     public function profile(Request $request)
-{
-    return response()->json([
-        'success' => true,
-        'user' => new UserResource($request->user())
-    ]);
-}
+    {
+        return response()->json([
+            'success' => true,
+            'user' => new UserResource($request->user())
+        ]);
+    }
 
     public function logout(Request $request)
     {
