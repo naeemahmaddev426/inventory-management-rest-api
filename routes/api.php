@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\CategoryController;
 use App\Http\Controllers\Api\V1\Auth\EmailVerificationController;
+use App\Http\Controllers\Api\V1\ProductController;
 
 Route::prefix('v1')->group(function () {
 
@@ -13,6 +14,7 @@ Route::prefix('v1')->group(function () {
     Route::apiResource('categories', CategoryController::class);
     Route::post('/forgot-password', [AuthController::class, 'forgotPassword']);
     Route::post('/reset-password',[AuthController::class, 'resetPassword']);
+    Route::apiResource('products', ProductController::class);
     Route::middleware('auth:sanctum')->group(function () {
 
         Route::post('/logout', [AuthController::class, 'logout']);
