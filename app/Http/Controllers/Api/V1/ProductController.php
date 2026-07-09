@@ -17,29 +17,36 @@ class ProductController extends Controller
 
     public function index(Request $request): JsonResponse
     {
-        $products = $this->productService->getProducts(
-            $request->only('search')
-        );
+        // Pass all possible filters to service
+        $products = $this->productService->getProducts($request->only([
+            'search', 'category_id', 'status', 'price_from', 'price_to', 'sort_by', 'sort_order', 'per_page'
+        ]));
 
         return response()->json([
             'success' => true,
             'message' => 'Products fetched successfully.',
-            'data' => ProductResource::collection($products),
+            'data'    => ProductResource::collection($products),
+            'meta'    => [
+                'current_page' => $products->currentPage(),
+                'last_page'    => $products->lastPage(),
+                'per_page'     => $products->perPage(),
+                'total'        => $products->total(),
+            ],
         ]);
     }
 
     public function store(StoreProductRequest $request): JsonResponse
     {
-        $product = $this->productService->createProduct(
-            $request->validated()
-        );
+        // Note: ensure the form has enctype="multipart/form-data"
+        $product = $this->productService->createProduct($request->validated());
 
         return response()->json([
             'success' => true,
             'message' => 'Product created successfully.',
-            'data' => new ProductResource($product),
+            'data'    => new ProductResource($product),
         ], 201);
     }
+
 
     public function show(int $id): JsonResponse
     {
