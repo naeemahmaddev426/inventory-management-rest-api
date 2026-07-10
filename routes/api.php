@@ -24,9 +24,7 @@ Route::prefix('v1')->group(function () {
         Route::post('/email/resend',[EmailVerificationController::class, 'resend']);
         
     });
-     Route::get('/verify-email/{id}/{hash}', [EmailVerificationController::class, 'verify'])
+    Route::get('/verify-email/{id}/{hash}', [EmailVerificationController::class, 'verify'])
         ->middleware('signed')
         ->name('verification.verify');
-   
-
 });

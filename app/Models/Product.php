@@ -68,14 +68,20 @@ class Product extends Model
 
     public function scopeSearch(Builder $query, ?string $search): Builder
     {
-        if (!$search) {
+        if (blank($search)) {
             return $query;
         }
 
-        return $query->where(function ($q) use ($search) {
+        $search = trim($search);
+
+        return $query->where(function (Builder $q) use ($search) {
             $q->where('name', 'LIKE', "%{$search}%")
-              ->orWhere('sku', 'LIKE', "%{$search}%")
-              ->orWhere('barcode', 'LIKE', "%{$search}%");
+                ->orWhere('sku', 'LIKE', "%{$search}%")
+                ->orWhere('barcode', 'LIKE', "%{$search}%")
+                ->orWhere('description', 'LIKE', "%{$search}%")
+                ->orWhereHas('category', function (Builder $category) use ($search) {
+                    $category->where('name', 'LIKE', "%{$search}%");
+                });
         });
     }
 
