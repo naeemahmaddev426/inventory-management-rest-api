@@ -13,3 +13,7 @@ Route::get('/', function () {
 
 Route::get('/reset-password', [ResetPasswordController::class, 'index'])
     ->name('password.reset');
+
+// Design preview routes for styled auth pages
+Route::view('/design-login', 'auth.login')->name('design.login');
+Route::view('/design-register', 'auth.register')->name('design.register');
