@@ -37,13 +37,8 @@ Laravel Sanctum
 
 ---
 
-# Current Status
+✅ Foundation Setup
 
-## Sprint 0 (Foundation)
-
-### Completed
-
-- [x] Laravel Project Created
 - [x] Docker Environment Configured
 - [x] Git Repository Initialized
 - [x] GitHub Repository Connected
@@ -61,180 +56,104 @@ Laravel Sanctum
 - [x] Notifications Folder Added
 - [x] Multiple Git Commits Created
 
----
+# ✅ Completed Modules
 
-## Pending Improvements
-
-- [ ] API Versioning
-- [ ] Base API Controller
-- [ ] API Response Helper
-- [ ] Exception Handler
-- [ ] Swagger
-- [ ] PHPUnit
-- [ ] CI/CD
-- [ ] PHPStan
-- [ ] Laravel Pint
+- Authentication
+- Category Management
+- Product Management
 
 ---
 
-# Sprint 1
+# 🔄 Modules In Progress
 
-## Authentication Module
+- Brand Module
 
-### Completed
+# ⏳ Upcoming Modules
 
-- [x] Register (Blade)
+- Unit Management
+- Tax Management
+- Warehouse Management
+- Supplier Management
+- Customer Management
+- Purchase Management
+- Stock Management
+- Stock Movement
+- Sales Management
+- Expense Management
+- Dashboard
+- Reports
+- Settings
+- Notifications
+- Export (PDF, Excel, CSV)
 
-### Remaining
+Sprint 0 ✅ Foundation
 
-- [ ] Register API
-- [ ] Login API
-- [ ] Logout API
-- [ ] Forgot Password API
-- [ ] Reset Password API
-- [ ] Email Verification API
-- [ ] Profile API
-- [ ] Change Password API
+Sprint 1 ✅ Authentication
 
----
+Sprint 2 ✅ Category Management
 
-# Sprint 2
+Sprint 3 ✅ Product Management
 
-Architecture
+Sprint 4 🔄 Brand Management
 
-- [ ] API Versioning
-- [ ] Repository Standardization
-- [ ] Service Layer Standardization
-- [ ] API Resources
-- [ ] Form Requests
-- [ ] API Response Format
+Sprint 5 ⏳ Unit Management
 
----
+Sprint 6 ⏳ Tax Management
 
-# Sprint 3
+Sprint 7 ⏳ Warehouse Management
 
-Authorization
+Sprint 8 ⏳ Supplier Management
 
-- [ ] Roles
-- [ ] Permissions
-- [ ] Policies
-- [ ] Gates
+Sprint 9 ⏳ Customer Management
 
----
+Sprint 10 ⏳ Purchase Management
 
-# Sprint 4
+Sprint 11 ⏳ Stock Management
 
-Category Module
+Sprint 12 ⏳ Sales Management
 
-- CRUD
-- Search
-- Filter
-- Pagination
-- Soft Delete
-- Restore
+Sprint 13 ⏳ Expense Management
 
----
+Sprint 14 ⏳ Dashboard & Reports
 
-# Sprint 5
+Sprint 15 ⏳ Testing & Documentation
 
-Brand Module
+Sprint 16 ⏳ Deployment & DevOps
 
----
+Overall Completion: 30%
 
-# Sprint 6
+Current Sprint: Sprint 4
 
-Supplier Module
+Current Module: Brand Module
 
----
+Current Branch:
+feature/brand-module
 
-# Sprint 7
+# 🚀 Future Improvements
 
-Customer Module
+- Swagger / OpenAPI
+- PHPUnit Feature & Unit Tests
+- GitHub Actions (CI/CD)
+- Redis Cache
+- Queue Workers
+- Laravel Pint
+- PHPStan
 
----
+# 🛠 Tech Stack
 
-# Sprint 8
-
-Product Module
-
-- SKU
-- Barcode
-- QR Code
-- Thumbnail
-- Multiple Images
-
----
-
-# Sprint 9
-
-Purchase Module
-
----
-
-# Sprint 10
-
-Sales Module
-
----
-
-# Sprint 11
-
-Reports
-
----
-
-# Sprint 12
-
-Dashboard
-
----
-
-# Sprint 13
-
-Notifications
-
----
-
-# Sprint 14
-
-Export
-
-- PDF
-- Excel
-- CSV
-
----
-
-# Sprint 15
-
-Testing
-
----
-
-# Sprint 16
-
-Documentation
-
-- Swagger
+- Laravel 13
+- PHP 8.x
+- MySQL
+- Docker & Docker Compose
+- Laravel Sanctum
+- RESTful API
+- Repository Pattern
+- Service Layer
+- Eloquent ORM
+- API Resources
+- Form Requests
+- Bootstrap 5
+- Chart.js
+- Git
+- GitHub
 - Postman
-
----
-
-# Sprint 17
-
-Deployment
-
-- Docker
-- VPS
-- Shared Hosting
-
----
-
-# Current Task
-
-➡ Sprint 1
-Authentication API
-
-Next Step
-
-Register API
