@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests\Brand;
 
-use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateBrandRequest extends FormRequest
 {
@@ -12,18 +12,46 @@ class UpdateBrandRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
      * Get the validation rules that apply to the request.
-     *
-     * @return array<string, ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
+        $brandId = $this->route('brand');
+
         return [
-            //
+            'name' => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique('brands', 'name')->ignore($brandId),
+            ],
+
+            'description' => [
+                'nullable',
+                'string',
+                'max:1000',
+            ],
+
+            'status' => [
+                'required',
+                'boolean',
+            ],
+        ];
+    }
+
+    /**
+     * Custom validation messages.
+     */
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'Brand name is required.',
+            'name.unique' => 'Brand name already exists.',
+            'status.required' => 'Status field is required.',
         ];
     }
 }

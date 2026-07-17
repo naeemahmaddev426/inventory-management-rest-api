@@ -61,16 +61,16 @@ Laravel Sanctum
 - Authentication
 - Category Management
 - Product Management
+- Brand Management
 
 ---
 
-# 🔄 Modules In Progress
+# 🔄 Modules In Progres
 
-- Brand Module
+- Unit Management
 
 # ⏳ Upcoming Modules
 
-- Unit Management
 - Tax Management
 - Warehouse Management
 - Supplier Management
@@ -94,9 +94,9 @@ Sprint 2 ✅ Category Management
 
 Sprint 3 ✅ Product Management
 
-Sprint 4 🔄 Brand Management
+Sprint 4 ✅ Brand Management
 
-Sprint 5 ⏳ Unit Management
+Sprint 5 🔄 Unit Management
 
 Sprint 6 ⏳ Tax Management
 
@@ -120,14 +120,11 @@ Sprint 15 ⏳ Testing & Documentation
 
 Sprint 16 ⏳ Deployment & DevOps
 
-Overall Completion: 30%
+Overall Completion: 35%
 
-Current Sprint: Sprint 4
+Current Sprint: Sprint 5
 
 Current Module: Brand Module
-
-Current Branch:
-feature/brand-module
 
 # 🚀 Future Improvements
 

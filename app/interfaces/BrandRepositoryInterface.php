@@ -4,7 +4,7 @@ namespace App\Interfaces;
 
 interface BrandRepositoryInterface
 {
-    public function getAll(array $filters);
+    public function getAll(array $filters = []);
 
     public function findById(int $id);
 

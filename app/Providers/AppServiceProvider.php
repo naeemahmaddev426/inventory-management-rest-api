@@ -9,6 +9,8 @@ use App\Repositories\CategoryRepository;
 use App\Interfaces\CategoryRepositoryInterface;
 use App\Repositories\ProductRepository;
 use App\Interfaces\ProductRepositoryInterface;
+use App\Repositories\BrandRepository;
+use App\Interfaces\BrandRepositoryInterface;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -31,6 +33,10 @@ class AppServiceProvider extends ServiceProvider
             ProductRepositoryInterface::class,
             ProductRepository::class
         );
+        $this->app->bind(
+            BrandRepositoryInterface::class,
+            BrandRepository::class
+       );
     }
 
     /**

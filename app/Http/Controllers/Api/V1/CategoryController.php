@@ -13,7 +13,7 @@ class CategoryController extends Controller
 {
     use ApiResponseTrait;
 
-    protected $service;
+    protected CategoryService $service;
 
     public function __construct(CategoryService $service)
     {

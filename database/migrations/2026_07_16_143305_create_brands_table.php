@@ -13,28 +13,20 @@ return new class extends Migration
     {
         Schema::create('brands', function (Blueprint $table) {
             $table->id();
-
             $table->string('name', 150)->unique();
             $table->string('slug')->unique();
-
             $table->string('logo')->nullable();
-
             $table->text('description')->nullable();
-
             $table->boolean('status')->default(true);
-
             $table->foreignId('created_by')
                 ->nullable()
                 ->constrained('users')
                 ->nullOnDelete();
-
             $table->foreignId('updated_by')
                 ->nullable()
                 ->constrained('users')
                 ->nullOnDelete();
-
             $table->softDeletes();
-
             $table->timestamps();
         });
     }

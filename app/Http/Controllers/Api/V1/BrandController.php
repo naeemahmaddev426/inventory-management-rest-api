@@ -3,63 +3,90 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\Brand\StoreBrandRequest;
+use App\Http\Requests\Brand\UpdateBrandRequest;
+use App\Http\Resources\BrandResource;
+use App\Services\BrandService;
+use App\Traits\ApiResponseTrait;
 
 class BrandController extends Controller
 {
+    use ApiResponseTrait;
+
+    protected BrandService $service;
+
+    public function __construct(BrandService $service)
+    {
+        $this->service = $service;
+    }
+
     /**
-     * Display a listing of the resource.
+     * Display a listing of brands.
      */
     public function index()
     {
-        //
+        return $this->success(
+            BrandResource::collection(
+                $this->service->getAllBrands(request()->all())
+            ),
+            'Brand List'
+        );
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Store a newly created brand.
      */
-    public function create()
+    public function store(StoreBrandRequest $request)
     {
-        //
+        $brand = $this->service->createBrand(
+            $request->validated()
+        );
+
+        return $this->success(
+            new BrandResource($brand),
+            'Brand Created Successfully',
+            201
+        );
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Display the specified brand.
      */
-    public function store(Request $request)
+    public function show($id)
     {
-        //
+        return $this->success(
+            new BrandResource(
+                $this->service->getBrand($id)
+            )
+        );
     }
 
     /**
-     * Display the specified resource.
+     * Update the specified brand.
      */
-    public function show(string $id)
+    public function update(UpdateBrandRequest $request, $id)
     {
-        //
+        $brand = $this->service->updateBrand(
+            $id,
+            $request->validated()
+        );
+
+        return $this->success(
+            new BrandResource($brand),
+            'Brand Updated Successfully'
+        );
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Remove the specified brand.
      */
-    public function edit(string $id)
+    public function destroy($id)
     {
-        //
-    }
+        $this->service->deleteBrand($id);
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return $this->success(
+            null,
+            'Brand Deleted Successfully'
+        );
     }
 }

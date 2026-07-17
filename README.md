@@ -201,6 +201,57 @@ docker compose up -d
 
 ---
 
+# 🧰 CLI via Docker
+
+Prefer running PHP/Composer/Artisan commands inside the project's Docker container so they use the container's PHP runtime (matching dependencies).
+
+Examples (from project root):
+
+```bash
+docker compose exec app php -v
+docker compose exec app composer install
+docker compose exec app php artisan route:list
+```
+
+You can also use the repository NPM scripts to run these commands (requires Node installed):
+
+```bash
+npm run artisan -- route:list
+npm run composer -- install
+```
+
+This keeps your host PHP version irrelevant and avoids platform mismatches.
+
+Quick convenience wrappers (Windows)
+
+From project root you can run these directly:
+
+```powershell
+.\composer.cmd install
+.\artisan.cmd route:list
+.\docker-composer.ps1 install
+.\docker-artisan.ps1 route:list
+```
+
+Note: if you prefer running `composer` without the `.` prefix on Windows you can add the project root to your PATH, but that affects only the current system.
+
+PowerShell dev aliases
+
+If you use PowerShell regularly you can load project-local aliases so `composer`, `php`, and `artisan` call the container automatically. From the project root run:
+
+```powershell
+.\dev-aliases.ps1
+# now `composer install` runs inside the app container
+composer install
+php artisan route:list
+```
+
+To enable the aliases permanently for your user add this line to your PowerShell profile (only do this if you understand it will shadow host `php`/`composer` in PowerShell):
+
+```powershell
+Add-Content $PROFILE "`. $PWD\dev-aliases.ps1`"
+```
+
 # 🌐 Application URLs
 
 Laravel API
