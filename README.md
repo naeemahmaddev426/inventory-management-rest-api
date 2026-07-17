@@ -252,7 +252,7 @@ To enable the aliases permanently for your user add this line to your PowerShell
 Add-Content $PROFILE "`. $PWD\dev-aliases.ps1`"
 ```
 
-# 🌐 Application URLs
+# 🌐 application URLs
 
 Laravel API
 
@@ -276,7 +276,7 @@ Copy the environment file
 cp .env.example .env
 ```
 
-Generate Application Key
+Generate application Key
 
 ```bash
 php artisan key:generate

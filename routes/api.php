@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\V1\AuthController;
-use App\Http\Controllers\Api\V1\CategoryController;
-use App\Http\Controllers\Api\V1\Auth\EmailVerificationController;
-use App\Http\Controllers\Api\V1\ProductController;
-use App\Http\Controllers\Api\V1\BrandController;
+use app\Http\Controllers\Api\V1\AuthController;
+use app\Http\Controllers\Api\V1\CategoryController;
+use app\Http\Controllers\Api\V1\Auth\EmailVerificationController;
+use app\Http\Controllers\Api\V1\ProductController;
+use app\Http\Controllers\Api\V1\BrandController;
+use App\Http\Controllers\Api\V1\UnitController;
 
 Route::prefix('v1')->group(function () {
 
@@ -17,6 +18,7 @@ Route::prefix('v1')->group(function () {
     Route::post('/reset-password',[AuthController::class, 'resetPassword']);
     Route::apiResource('products', ProductController::class);
     Route::apiResource('brands', BrandController::class);
+    Route::apiResource('units', UnitController::class);
     Route::middleware('auth:sanctum')->group(function () {
 
         Route::post('/logout', [AuthController::class, 'logout']);

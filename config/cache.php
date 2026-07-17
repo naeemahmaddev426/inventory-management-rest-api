@@ -118,7 +118,7 @@ return [
     |
     */
 
-    'prefix' => env('CACHE_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')).'-cache-'),
+    'prefix' => env('CACHE_PREFIX', Str::slug((string) env('app_NAME', 'laravel')).'-cache-'),
 
     /*
     |--------------------------------------------------------------------------
@@ -127,7 +127,7 @@ return [
     |
     | This value determines the classes that can be unserialized from cache
     | storage. By default, no PHP classes will be unserialized from your
-    | cache to prevent gadget chain attacks if your APP_KEY is leaked.
+    | cache to prevent gadget chain attacks if your app_KEY is leaked.
     |
     */
 

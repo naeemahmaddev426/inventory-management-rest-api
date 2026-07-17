@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Services;
+namespace app\Services;
 
-use App\Interfaces\ProductRepositoryInterface;
-use App\Models\Product;
-use App\Services\Product\ProductImageService;
-use App\Services\Product\ProductSkuService;
-use App\Services\Product\ProductBarcodeService;
-use App\Services\Product\ProductQrCodeService;
+use app\Interfaces\ProductRepositoryInterface;
+use app\Models\Product;
+use app\Services\Product\ProductImageService;
+use app\Services\Product\ProductSkuService;
+use app\Services\Product\ProductBarcodeService;
+use app\Services\Product\ProductQrCodeService;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;

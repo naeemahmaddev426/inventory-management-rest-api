@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\ResetPasswordController;
+use app\Http\Controllers\Auth\ResetPasswordController;
 
 Route::get('/', function () {
     return response()->json([

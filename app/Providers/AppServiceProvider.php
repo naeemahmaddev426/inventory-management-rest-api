@@ -1,18 +1,20 @@
 <?php
 
-namespace App\Providers;
+namespace app\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Repositories\AuthRepository;
-use App\Interfaces\AuthRepositoryInterface;
-use App\Repositories\CategoryRepository;
-use App\Interfaces\CategoryRepositoryInterface;
-use App\Repositories\ProductRepository;
-use App\Interfaces\ProductRepositoryInterface;
-use App\Repositories\BrandRepository;
-use App\Interfaces\BrandRepositoryInterface;
+use app\Repositories\AuthRepository;
+use app\Interfaces\AuthRepositoryInterface;
+use app\Repositories\CategoryRepository;
+use app\Interfaces\CategoryRepositoryInterface;
+use app\Repositories\ProductRepository;
+use app\Interfaces\ProductRepositoryInterface;
+use app\Repositories\BrandRepository;
+use app\Interfaces\BrandRepositoryInterface;
+use App\Interfaces\UnitRepositoryInterface;
+use App\Repositories\UnitRepository;
 
-class AppServiceProvider extends ServiceProvider
+class appServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
@@ -37,6 +39,10 @@ class AppServiceProvider extends ServiceProvider
             BrandRepositoryInterface::class,
             BrandRepository::class
        );
+       $this->app->bind(
+            UnitRepositoryInterface::class,
+            UnitRepository::class
+        );
     }
 
     /**

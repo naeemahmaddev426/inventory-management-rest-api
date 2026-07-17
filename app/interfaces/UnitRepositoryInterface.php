@@ -2,7 +2,7 @@
 
 namespace app\Interfaces;
 
-interface BrandRepositoryInterface
+interface UnitRepositoryInterface
 {
     public function getAll(array $filters = []);
 

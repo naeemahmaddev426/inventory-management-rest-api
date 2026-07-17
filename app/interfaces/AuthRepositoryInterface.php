@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Interfaces;
+namespace app\Interfaces;
 
-use App\Http\Requests\Auth\RegisterRequest;
-use App\Http\Requests\Auth\LoginRequest;
+use app\Http\Requests\Auth\RegisterRequest;
+use app\Http\Requests\Auth\LoginRequest;
 
 interface AuthRepositoryInterface
 {

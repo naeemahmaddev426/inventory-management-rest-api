@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Product;
+namespace app\Services\Product;
 
 use Milon\Barcode\DNS1D;
 

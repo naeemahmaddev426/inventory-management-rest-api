@@ -1,11 +1,11 @@
 <?php
 
-namespace app\Http\Resources;
+namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class BrandResource extends JsonResource
+class UnitResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,6 +16,8 @@ class BrandResource extends JsonResource
             'id' => $this->id,
 
             'name' => $this->name,
+
+            'short_name' => $this->short_name,
 
             'description' => $this->description,
 

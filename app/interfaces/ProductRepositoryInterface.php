@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Interfaces;
+namespace app\Interfaces;
 
-use App\Models\Product;
+use app\Models\Product;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 interface ProductRepositoryInterface

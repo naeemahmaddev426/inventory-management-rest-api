@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1;
+namespace app\Http\Controllers\Api\V1;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Brand\StoreBrandRequest;
-use App\Http\Requests\Brand\UpdateBrandRequest;
-use App\Http\Resources\BrandResource;
-use App\Services\BrandService;
-use App\Traits\ApiResponseTrait;
+use app\Http\Controllers\Controller;
+use app\Http\Requests\Brand\StoreBrandRequest;
+use app\Http\Requests\Brand\UpdateBrandRequest;
+use app\Http\Resources\BrandResource;
+use app\Services\BrandService;
+use app\Traits\ApiResponseTrait;
 
 class BrandController extends Controller
 {

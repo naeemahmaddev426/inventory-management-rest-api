@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Repositories;
+namespace app\Repositories;
 
-use App\Models\User;
+use app\Models\User;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Requests\Auth\RegisterRequest;
-use App\Interfaces\AuthRepositoryInterface;
-use App\Http\Requests\Auth\LoginRequest;
+use app\Http\Requests\Auth\RegisterRequest;
+use app\Interfaces\AuthRepositoryInterface;
+use app\Http\Requests\Auth\LoginRequest;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Password;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services\Product;
+namespace app\Services\Product;
 
-use App\Models\Product;
+use app\Models\Product;
 
 class ProductSkuService
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace app\Http\Requests\Brand;
+namespace App\Http\Requests\Unit;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class UpdateBrandRequest extends FormRequest
+class UpdateUnitRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -16,18 +16,25 @@ class UpdateBrandRequest extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to the request.
+     * Get the validation rules.
      */
     public function rules(): array
     {
-        $brandId = $this->route('brand');
+        $unitId = $this->route('unit');
 
         return [
             'name' => [
                 'required',
                 'string',
-                'max:255',
-                Rule::unique('brands', 'name')->ignore($brandId),
+                'max:100',
+                Rule::unique('units', 'name')->ignore($unitId),
+            ],
+
+            'short_name' => [
+                'required',
+                'string',
+                'max:20',
+                Rule::unique('units', 'short_name')->ignore($unitId),
             ],
 
             'description' => [
@@ -49,8 +56,12 @@ class UpdateBrandRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'name.required' => 'Brand name is required.',
-            'name.unique' => 'Brand name already exists.',
+            'name.required' => 'Unit name is required.',
+            'name.unique' => 'Unit name already exists.',
+
+            'short_name.required' => 'Short name is required.',
+            'short_name.unique' => 'Short name already exists.',
+
             'status.required' => 'Status field is required.',
         ];
     }

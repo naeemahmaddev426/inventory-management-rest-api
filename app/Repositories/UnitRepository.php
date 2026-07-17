@@ -1,17 +1,20 @@
 <?php
 
-namespace app\Repositories;
+namespace App\Repositories;
 
-use app\Interfaces\BrandRepositoryInterface;
-use app\Models\Brand;
+use App\Interfaces\UnitRepositoryInterface;
+use App\Models\Unit;
 
-class BrandRepository implements BrandRepositoryInterface
+class UnitRepository implements UnitRepositoryInterface
 {
     public function getAll(array $filters = [])
     {
-        return Brand::query()
+        return Unit::query()
             ->when(isset($filters['search']), function ($query) use ($filters) {
-                $query->where('name', 'like', '%' . $filters['search'] . '%');
+                $query->where(function ($q) use ($filters) {
+                    $q->where('name', 'like', '%' . $filters['search'] . '%')
+                      ->orWhere('short_name', 'like', '%' . $filters['search'] . '%');
+                });
             })
             ->when(isset($filters['status']), function ($query) use ($filters) {
                 $query->where('status', $filters['status']);
@@ -22,21 +25,21 @@ class BrandRepository implements BrandRepositoryInterface
 
     public function findById(int $id)
     {
-        return Brand::findOrFail($id);
+        return Unit::findOrFail($id);
     }
 
     public function create(array $data)
     {
-        return Brand::create($data);
+        return Unit::create($data);
     }
 
     public function update(int $id, array $data)
     {
-        $brand = $this->findById($id);
+        $unit = $this->findById($id);
 
-        $brand->update($data);
+        $unit->update($data);
 
-        return $brand->fresh();
+        return $unit->fresh();
     }
 
     public function delete(int $id)
@@ -46,15 +49,15 @@ class BrandRepository implements BrandRepositoryInterface
 
     public function restore(int $id)
     {
-        $brand = Brand::onlyTrashed()->findOrFail($id);
+        $unit = Unit::onlyTrashed()->findOrFail($id);
 
-        $brand->restore();
+        $unit->restore();
 
-        return $brand;
+        return $unit;
     }
 
     public function forceDelete(int $id)
     {
-        return Brand::onlyTrashed()->findOrFail($id)->forceDelete();
+        return Unit::onlyTrashed()->findOrFail($id)->forceDelete();
     }
 }
