@@ -154,3 +154,52 @@ Current Module: Brand Module
 - Git
 - GitHub
 - Postman
+
+# 📈 Backend Progress
+
+## ✅ Business Modules
+
+- [x] Authentication
+- [x] Category Management
+- [x] Product Management
+- [x] Brand Management
+- [ ] Unit Management
+- [ ] Tax Management
+- [ ] Warehouse Management
+- [ ] Supplier Management
+- [ ] Customer Management
+- [ ] Purchase Management
+- [ ] Stock Management
+- [ ] Stock Movement
+- [ ] Sales Management
+- [ ] Expense Management
+- [ ] Dashboard
+- [ ] Reports
+- [ ] Settings
+- [ ] Notifications
+- [ ] Export (PDF, Excel, CSV)
+
+## ✅ Technical Features
+
+- [x] Docker Environment
+- [x] Git & GitHub
+- [x] Laravel Sanctum
+- [x] Repository Pattern
+- [x] Service Layer
+- [x] API Versioning
+- [x] API Resources
+- [x] Form Requests
+- [x] Soft Deletes
+- [ ] Events
+- [ ] Listeners
+- [ ] Queues
+- [ ] Mail
+- [ ] Notifications
+- [ ] Policies
+- [ ] Gates
+- [ ] Swagger / OpenAPI
+- [ ] PHPUnit
+- [ ] Redis Cache
+- [ ] GitHub Actions (CI/CD)
+- [ ] Laravel Pint
+- [ ] PHPStan
