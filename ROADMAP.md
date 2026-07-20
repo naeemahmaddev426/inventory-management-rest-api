@@ -125,7 +125,7 @@ Overall Completion: 45%
 
 Current Sprint: Sprint 7
 
-Current Module: Tax Management
+Current Module: Warehouse Management
 
 # 🚀 Future Improvements
 
