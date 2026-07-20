@@ -63,12 +63,13 @@ Laravel Sanctum
 - Product Management
 - Brand Management
 - Unit Management
+- Tax Management
 
 ---
 
 # 🔄 Modules In Progres
 
-- Tax Management
+- Warehouse Management
 
 # ⏳ Upcoming Modules
 
@@ -98,9 +99,9 @@ Sprint 4 ✅ Brand Management
 
 Sprint 5 ✅ Unit Management
 
-Sprint 6 🔄 Tax Management
+Sprint 6 ✅ Tax Management
 
-Sprint 7 ⏳ Warehouse Management
+Sprint 7 🔄 Warehouse Management
 
 Sprint 8 ⏳ Supplier Management
 
@@ -120,9 +121,9 @@ Sprint 15 ⏳ Testing & Documentation
 
 Sprint 16 ⏳ Deployment & DevOps
 
-Overall Completion: 40%
+Overall Completion: 45%
 
-Current Sprint: Sprint 6
+Current Sprint: Sprint 7
 
 Current Module: Tax Management
 
@@ -164,7 +165,7 @@ Current Module: Tax Management
 - [x] Product Management
 - [x] Brand Management
 - [x] Unit Management
-- [ ] Tax Management
+- [x] Tax Management
 - [ ] Warehouse Management
 - [ ] Supplier Management
 - [ ] Customer Management
@@ -193,7 +194,7 @@ Current Module: Tax Management
 - [ ] Events
 - [ ] Listeners
 - [ ] Queues
-- [ ] Mail
+- [x] Mail
 - [ ] Notifications
 - [ ] Policies
 - [ ] Gates

@@ -1,10 +1,10 @@
 services:
-    app:
+    App:
         build:
             context: .
             dockerfile: Dockerfile
 
-        container_name: inventory_app
+        container_name: inventory_App
 
         working_dir: /var/www
 

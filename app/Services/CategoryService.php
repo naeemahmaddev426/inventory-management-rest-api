@@ -1,9 +1,9 @@
 <?php
 
-namespace app\Services;
+namespace App\Services;
 
 use Illuminate\Support\Str;
-use app\Interfaces\CategoryRepositoryInterface;
+use App\Interfaces\CategoryRepositoryInterface;
 
 class CategoryService
 {

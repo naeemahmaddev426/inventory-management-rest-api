@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use app\Models\User;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
     use WithoutModelEvents;
 
     /**
-     * Seed the application's database.
+     * Seed the Application's database.
      */
     public function run(): void
     {

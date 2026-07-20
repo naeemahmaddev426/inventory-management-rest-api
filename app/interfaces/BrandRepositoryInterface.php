@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Interfaces;
+namespace App\Interfaces;
 
 interface BrandRepositoryInterface
 {

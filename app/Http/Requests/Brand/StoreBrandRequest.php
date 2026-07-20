@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Http\Requests\Brand;
+namespace App\Http\Requests\Brand;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -15,7 +15,7 @@ class StoreBrandRequest extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to the request.
+     * Get the validation rules that Apply to the request.
      */
     public function rules(): array
     {

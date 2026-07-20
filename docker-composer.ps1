@@ -4,5 +4,5 @@ Param(
     $Args
 )
 
-$arguments = @('compose','exec','app','composer') + $Args
+$arguments = @('compose','exec','App','composer') + $Args
 Start-Process -FilePath 'docker' -ArgumentList $arguments -NoNewWindow -Wait

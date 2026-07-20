@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\Api\V1\AuthController;
-use app\Http\Controllers\Api\V1\CategoryController;
-use app\Http\Controllers\Api\V1\Auth\EmailVerificationController;
-use app\Http\Controllers\Api\V1\ProductController;
-use app\Http\Controllers\Api\V1\BrandController;
+use App\Http\Controllers\Api\V1\AuthController;
+use App\Http\Controllers\Api\V1\CategoryController;
+use App\Http\Controllers\Api\V1\Auth\EmailVerificationController;
+use App\Http\Controllers\Api\V1\ProductController;
+use App\Http\Controllers\Api\V1\BrandController;
 use App\Http\Controllers\Api\V1\UnitController;
+use App\Http\Controllers\Api\V1\TaxController;
 
 Route::prefix('v1')->group(function () {
 
@@ -19,6 +20,7 @@ Route::prefix('v1')->group(function () {
     Route::apiResource('products', ProductController::class);
     Route::apiResource('brands', BrandController::class);
     Route::apiResource('units', UnitController::class);
+    Route::apiResource('taxes', TaxController::class);
     Route::middleware('auth:sanctum')->group(function () {
 
         Route::post('/logout', [AuthController::class, 'logout']);

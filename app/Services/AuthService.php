@@ -1,10 +1,10 @@
 <?php
 
-namespace app\Services;
+namespace App\Services;
 
-use app\Interfaces\AuthRepositoryInterface;
-use app\Http\Requests\Auth\RegisterRequest;
-use app\Http\Requests\Auth\LoginRequest;
+use App\Interfaces\AuthRepositoryInterface;
+use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Requests\Auth\LoginRequest;
 
 class AuthService
 {

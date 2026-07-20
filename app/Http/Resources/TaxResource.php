@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class BrandResource extends JsonResource
+class TaxResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,13 +17,21 @@ class BrandResource extends JsonResource
 
             'name' => $this->name,
 
+            'rate' => $this->rate,
+
+            'type' => $this->type,
+
+            'status' => $this->status,
+
             'description' => $this->description,
 
-            'status' => (bool) $this->status,
+            'created_by' => $this->created_by,
 
-            'created_at' => $this->created_at?->toDateTimeString(),
+            'updated_by' => $this->updated_by,
 
-            'updated_at' => $this->updated_at?->toDateTimeString(),
+            'created_at' => $this->created_at,
+
+            'updated_at' => $this->updated_at,
         ];
     }
 }

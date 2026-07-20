@@ -1,8 +1,8 @@
 <?php
 
-namespace app\Services;
+namespace App\Services;
 
-use app\Interfaces\BrandRepositoryInterface;
+use App\Interfaces\BrandRepositoryInterface;
 use Illuminate\Support\Str;
 
 class BrandService

@@ -2,24 +2,26 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Brand extends Model
+class Tax extends Model
 {
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'name',
-        'slug',
-        'logo',
-        'description',
+        'rate',
+        'type',
         'status',
+        'description',
         'created_by',
         'updated_by',
     ];
 
     protected $casts = [
+        'rate' => 'decimal:2',
         'status' => 'boolean',
     ];
 }

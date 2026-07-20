@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Services\Product;
+namespace App\Services\Product;
 
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 class ProductImageService
 {
     /**
-     * Store the uploaded product image on the 'public' disk (storage/app/public/products).
+     * Store the uploaded product image on the 'public' disk (storage/App/public/products).
      * Returns the relative path, e.g. "products/abc123.jpg", or null if no file.
      */
     public function upload(?UploadedFile $image): ?string
@@ -16,7 +16,7 @@ class ProductImageService
         if (!$image) {
             return null;
         }
-        // Store in 'products' directory on public disk (storage/app/public/products)
+        // Store in 'products' directory on public disk (storage/App/public/products)
         return $image->store('products', 'public');
     }
 

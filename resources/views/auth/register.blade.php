@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      body{margin:0; font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(120deg,#fefce8 0%,#ecfeff 100%); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px}
+      body{margin:0; font-family:Inter,system-ui,-Apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(120deg,#fefce8 0%,#ecfeff 100%); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px}
       .reg-page{width:min(100%, 1160px)}
       .reg-card{display:flex; flex-wrap:wrap; width:100%; min-height:660px; background:#fff; box-shadow:0 30px 80px rgba(2,6,23,0.10); border-radius:24px; overflow:hidden}
       .reg-left{flex:0 0 38%; padding:48px 42px; background:linear-gradient(135deg,#0f172a 0%,#111827 60%,#1d4ed8 100%); color:#fff; display:flex; flex-direction:column; justify-content:center}

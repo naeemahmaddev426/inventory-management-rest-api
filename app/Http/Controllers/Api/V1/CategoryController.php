@@ -1,13 +1,13 @@
 <?php
 
-namespace app\Http\Controllers\Api\V1;
+namespace App\Http\Controllers\Api\V1;
 
-use app\Traits\ApiResponseTrait;
-use app\Services\CategoryService;
-use app\Http\Controllers\Controller;
-use app\Http\Requests\StoreCategoryRequest;
-use app\Http\Requests\UpdateCategoryRequest;
-use app\Http\Resources\CategoryResource;
+use App\Traits\ApiResponseTrait;
+use App\Services\CategoryService;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
+use App\Http\Resources\CategoryResource;
 
 class CategoryController extends Controller
 {

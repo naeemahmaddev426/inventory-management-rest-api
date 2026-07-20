@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Http\Requests\Unit;
+namespace App\Http\Requests\Unit;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -58,7 +58,6 @@ class StoreUnitRequest extends FormRequest
 
             'short_name.required' => 'Short name is required.',
             'short_name.unique' => 'Short name already exists.',
-
             'status.required' => 'Status field is required.',
         ];
     }

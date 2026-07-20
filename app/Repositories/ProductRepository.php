@@ -1,9 +1,9 @@
 <?php
 
-namespace app\Repositories;
+namespace App\Repositories;
 
-use app\Interfaces\ProductRepositoryInterface;
-use app\Models\Product;
+use App\Interfaces\ProductRepositoryInterface;
+use App\Models\Product;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class ProductRepository implements ProductRepositoryInterface

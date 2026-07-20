@@ -1,11 +1,11 @@
 <?php
 
-namespace app\Http\Controllers\Api\V1;
-use app\Http\Controllers\Controller;
-use app\Http\Requests\StoreProductRequest;
-use app\Http\Requests\UpdateProductRequest;
-use app\Http\Resources\ProductResource;
-use app\Services\ProductService;
+namespace App\Http\Controllers\Api\V1;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
+use App\Http\Resources\ProductResource;
+use App\Services\ProductService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 

@@ -94,7 +94,7 @@ The goal of this project is to demonstrate professional Laravel backend architec
 # 📁 Project Structure
 
 ```
-app
+App
 ├── Http
 │   ├── Controllers
 │   ├── Middleware
@@ -208,9 +208,9 @@ Prefer running PHP/Composer/Artisan commands inside the project's Docker contain
 Examples (from project root):
 
 ```bash
-docker compose exec app php -v
-docker compose exec app composer install
-docker compose exec app php artisan route:list
+docker compose exec App php -v
+docker compose exec App composer install
+docker compose exec App php artisan route:list
 ```
 
 You can also use the repository NPM scripts to run these commands (requires Node installed):
@@ -222,7 +222,7 @@ npm run composer -- install
 
 This keeps your host PHP version irrelevant and avoids platform mismatches.
 
-Quick convenience wrappers (Windows)
+Quick convenience wrAppers (Windows)
 
 From project root you can run these directly:
 
@@ -241,7 +241,7 @@ If you use PowerShell regularly you can load project-local aliases so `composer`
 
 ```powershell
 .\dev-aliases.ps1
-# now `composer install` runs inside the app container
+# now `composer install` runs inside the App container
 composer install
 php artisan route:list
 ```
@@ -252,7 +252,7 @@ To enable the aliases permanently for your user add this line to your PowerShell
 Add-Content $PROFILE "`. $PWD\dev-aliases.ps1`"
 ```
 
-# 🌐 application URLs
+# 🌐 Application URLs
 
 Laravel API
 
@@ -276,7 +276,7 @@ Copy the environment file
 cp .env.example .env
 ```
 
-Generate application Key
+Generate Application Key
 
 ```bash
 php artisan key:generate

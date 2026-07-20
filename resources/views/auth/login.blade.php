@@ -8,7 +8,7 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 		<style>
 			:root{color-scheme:light}
-		    body{margin:0; font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:radial-gradient(circle at top left,#eef2ff 0%,#f8fafc 45%,#fef3c7 100%); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px}
+		    body{margin:0; font-family:Inter,system-ui,-Apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:radial-gradient(circle at top left,#eef2ff 0%,#f8fafc 45%,#fef3c7 100%); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px}
 			.auth-page{width:min(100%, 1180px)}
 			.auth-card{display:flex; flex-wrap:wrap; width:100%; min-height:620px; background:rgba(255,255,255,0.96); box-shadow:0 30px 80px rgba(2,6,23,0.12); border-radius:24px; overflow:hidden}
 			.auth-left{flex:0 0 44%; padding:48px 42px; background:linear-gradient(135deg,#4338ca 0%,#2563eb 55%,#0f766e 100%); color:#fff; display:flex; flex-direction:column; justify-content:center}

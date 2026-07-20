@@ -1,9 +1,9 @@
 <?php
 
-namespace app\Http\Controllers\Api\V1\Auth;
+namespace App\Http\Controllers\Api\V1\Auth;
 
-use app\Http\Controllers\Controller;
-use app\Models\User;
+use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;

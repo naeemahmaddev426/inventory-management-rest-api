@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Illuminate\Foundation\application;
+use Illuminate\Foundation\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 
 define('LARAVEL_START', microtime(true));
@@ -10,9 +10,9 @@ define('LARAVEL_START', microtime(true));
 require __DIR__.'/vendor/autoload.php';
 
 // Bootstrap Laravel and handle the command...
-/** @var application $app */
-$app = require_once __DIR__.'/bootstrap/app.php';
+/** @var Application $App */
+$App = require_once __DIR__.'/bootstrap/App.php';
 
-$status = $app->handleCommand(new ArgvInput);
+$status = $App->handleCommand(new ArgvInput);
 
 exit($status);

@@ -1,16 +1,16 @@
 <?php
 
-namespace app\Http\Controllers\Api\V1;
+namespace App\Http\Controllers\Api\V1;
 
-use app\Http\Controllers\Controller;
-use app\Http\Requests\Auth\RegisterRequest;
-use app\Http\Resources\UserResource;
-use app\Services\AuthService;
-use app\Http\Requests\Auth\LoginRequest;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Resources\UserResource;
+use App\Services\AuthService;
+use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\Request;
-use app\Http\Requests\Auth\ChangePasswordRequest;
-use app\Http\Requests\Auth\ForgotPasswordRequest;
-use app\Http\Requests\Auth\ResetPasswordRequest;
+use App\Http\Requests\Auth\ChangePasswordRequest;
+use App\Http\Requests\Auth\ForgotPasswordRequest;
+use App\Http\Requests\Auth\ResetPasswordRequest;
 
 class AuthController extends Controller
 {

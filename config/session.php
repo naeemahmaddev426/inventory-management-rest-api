@@ -110,7 +110,7 @@ return [
     |
     | Some session drivers must manually sweep their storage location to get
     | rid of old sessions from storage. Here are the chances that it will
-    | happen on a given request. By default, the odds are 2 out of 100.
+    | hAppen on a given request. By default, the odds are 2 out of 100.
     |
     */
 
@@ -129,7 +129,7 @@ return [
 
     'cookie' => env(
         'SESSION_COOKIE',
-        Str::slug((string) env('app_NAME', 'laravel')).'-session'
+        Str::slug((string) env('App_NAME', 'laravel')).'-session'
     ),
 
     /*
@@ -139,7 +139,7 @@ return [
     |
     | The session cookie path determines the path for which the cookie will
     | be regarded as available. Typically, this will be the root path of
-    | your application, but you're free to change this when necessary.
+    | your Application, but you're free to change this when necessary.
     |
     */
 
@@ -221,8 +221,8 @@ return [
     |
     | This value controls the serialization strategy for session data, which
     | is JSON by default. Setting this to "php" allows the storage of PHP
-    | objects in the session but can make an application vulnerable to
-    | "gadget chain" serialization attacks if the app_KEY is leaked.
+    | objects in the session but can make an Application vulnerable to
+    | "gadget chain" serialization attacks if the App_KEY is leaked.
     |
     | Supported: "json", "php"
     |

@@ -14,12 +14,12 @@
     </testsuites>
     <source>
         <include>
-            <directory>app</directory>
+            <directory>App</directory>
         </include>
     </source>
     <php>
-        <env name="app_ENV" value="testing"/>
-        <env name="app_MAINTENANCE_DRIVER" value="file"/>
+        <env name="App_ENV" value="testing"/>
+        <env name="App_MAINTENANCE_DRIVER" value="file"/>
         <env name="BCRYPT_ROUNDS" value="4"/>
         <env name="BROADCAST_CONNECTION" value="null"/>
         <env name="CACHE_STORE" value="array"/>

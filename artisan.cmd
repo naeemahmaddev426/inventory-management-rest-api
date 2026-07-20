@@ -1,2 +1,2 @@
 @echo off
-docker compose exec app php artisan %*
+docker compose exec App php artisan %*

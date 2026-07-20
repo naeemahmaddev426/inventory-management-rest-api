@@ -27,7 +27,7 @@ return [
     |
     | This option controls the log channel that should be used to log warnings
     | regarding deprecated PHP and library features. This allows you to get
-    | your application ready for upcoming major versions of dependencies.
+    | your Application ready for upcoming major versions of dependencies.
     |
     */
 
@@ -41,7 +41,7 @@ return [
     | Log Channels
     |--------------------------------------------------------------------------
     |
-    | Here you may configure the log channels for your application. Laravel
+    | Here you may configure the log channels for your Application. Laravel
     | utilizes the Monolog PHP logging library, which includes a variety
     | of powerful log handlers and formatters that you're free to use.
     |
@@ -76,7 +76,7 @@ return [
         'slack' => [
             'driver' => 'slack',
             'url' => env('LOG_SLACK_WEBHOOK_URL'),
-            'username' => env('LOG_SLACK_USERNAME', env('app_NAME', 'Laravel')),
+            'username' => env('LOG_SLACK_USERNAME', env('App_NAME', 'Laravel')),
             'emoji' => env('LOG_SLACK_EMOJI', ':boom:'),
             'level' => env('LOG_LEVEL', 'critical'),
             'replace_placeholders' => true,

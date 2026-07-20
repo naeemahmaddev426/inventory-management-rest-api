@@ -1307,7 +1307,7 @@
                 "ext-ftp": "Required to use the Flysystem FTP driver.",
                 "ext-gd": "Required to use Illuminate\\Http\\Testing\\FileFactory::image().",
                 "ext-memcached": "Required to use the memcache cache driver.",
-                "ext-pcntl": "Required to use all features of the queue worker and console signal trapping.",
+                "ext-pcntl": "Required to use all features of the queue worker and console signal trApping.",
                 "ext-pdo": "Required to use all database features.",
                 "ext-posix": "Required to use all features of the queue worker.",
                 "ext-redis": "Required to use the Redis cache and queue drivers (^4.0 || ^5.0 || ^6.0).",
@@ -1437,7 +1437,7 @@
             "license": [
                 "MIT"
             ],
-            "description": "Add beautiful and user-friendly forms to your command-line applications.",
+            "description": "Add beautiful and user-friendly forms to your command-line Applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
                 "source": "https://github.com/laravel/prompts/tree/v0.3.21"
@@ -3303,7 +3303,7 @@
             },
             "suggest": {
                 "composer/class-map-generator": "Improved tab completion performance with better class discovery.",
-                "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
+                "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot hAppier :)",
                 "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well."
             },
             "bin": [
@@ -3609,7 +3609,7 @@
                 "generator",
                 "laravel",
                 "qrcode",
-                "wrapper"
+                "wrApper"
             ],
             "support": {
                 "issues": "https://github.com/SimpleSoftwareIO/simple-qrcode/issues",
@@ -3664,7 +3664,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Decouples applications from the system clock",
+            "description": "Decouples Applications from the system clock",
             "homepage": "https://symfony.com",
             "keywords": [
                 "clock",
@@ -4076,7 +4076,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
+            "description": "Provides tools that allow your Application components to communicate with each other by dispatching events and listening to them",
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/event-dispatcher/tree/v8.1.0"
@@ -5824,7 +5824,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Provides tools to internationalize your application",
+            "description": "Provides tools to internationalize your Application",
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/translation/tree/v8.1.0"
@@ -6623,7 +6623,7 @@
                     "email": "enunomaduro@gmail.com"
                 }
             ],
-            "description": "Easily delve into your Laravel application's log files directly from the command line.",
+            "description": "Easily delve into your Laravel Application's log files directly from the command line.",
             "homepage": "https://github.com/laravel/pail",
             "keywords": [
                 "dev",
@@ -6760,7 +6760,7 @@
             "type": "project",
             "autoload": {
                 "psr-4": {
-                    "app\\": "app/",
+                    "App\\": "App/",
                     "Database\\Seeders\\": "database/seeders/",
                     "Database\\Factories\\": "database/factories/"
                 }
@@ -6996,7 +6996,7 @@
                     "email": "enunomaduro@gmail.com"
                 }
             ],
-            "description": "Cli error handling for console/command-line PHP applications.",
+            "description": "Cli error handling for console/command-line PHP Applications.",
             "keywords": [
                 "artisan",
                 "cli",

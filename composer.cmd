@@ -1,2 +1,2 @@
 @echo off
-docker compose exec app composer %*
+docker compose exec App composer %*
