@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\V1\ProductController;
 use App\Http\Controllers\Api\V1\BrandController;
 use App\Http\Controllers\Api\V1\UnitController;
 use App\Http\Controllers\Api\V1\TaxController;
+use App\Http\Controllers\Api\V1\WarehouseController;
 
 Route::prefix('v1')->group(function () {
 
@@ -21,6 +22,11 @@ Route::prefix('v1')->group(function () {
     Route::apiResource('brands', BrandController::class);
     Route::apiResource('units', UnitController::class);
     Route::apiResource('taxes', TaxController::class);
+    Route::apiResource('warehouses', WarehouseController::class);
+
+    Route::post('warehouses/{id}/restore', [WarehouseController::class, 'restore']);
+
+    Route::delete('warehouses/{id}/force-delete', [WarehouseController::class, 'forceDelete']);
     Route::middleware('auth:sanctum')->group(function () {
 
         Route::post('/logout', [AuthController::class, 'logout']);
