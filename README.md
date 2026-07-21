@@ -52,13 +52,16 @@ The goal of this project is to demonstrate professional Laravel backend architec
 - Pagination
 - Validation
 - API Resources
+- Product Management
+- Brand Management
+- Unit Management
+- Tax Management
+- Warehouse Management
 
 ---
 
 # 🚧 Upcoming Modules
 
-- Product Management
-- Brand Management
 - Supplier Management
 - Customer Management
 - Purchase Management
@@ -327,8 +330,8 @@ The APIs are tested using:
 | Brand Module       | ✅ Completed   |
 | Unit Module        | ✅ Completed   |
 | Tax Module         | ✅ Completed   |
-| wareHouse Module   | 🚧 In Progress |
-| Supplier Module    | ⏳ Planned     |
+| WareHouse Module   | ✅ Completed   |
+| Supplier Module    | 🚧 In Progress |
 | Customer Module    | ⏳ Planned     |
 | Purchase Module    | ⏳ Planned     |
 | Sales Module       | ⏳ Planned     |
