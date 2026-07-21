@@ -323,7 +323,11 @@ The APIs are tested using:
 | Password Reset     | ✅ Completed   |
 | Email Verification | ✅ Completed   |
 | Category CRUD      | ✅ Completed   |
-| Product Module     | 🚧 In Progress |
+| Product Module     | ✅ Completed   |
+| Brand Module       | ✅ Completed   |
+| Unit Module        | ✅ Completed   |
+| Tax Module         | ✅ Completed   |
+| wareHouse Module   | 🚧 In Progress |
 | Supplier Module    | ⏳ Planned     |
 | Customer Module    | ⏳ Planned     |
 | Purchase Module    | ⏳ Planned     |
