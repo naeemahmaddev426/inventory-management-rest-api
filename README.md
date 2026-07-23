@@ -57,12 +57,12 @@ The goal of this project is to demonstrate professional Laravel backend architec
 - Unit Management
 - Tax Management
 - Warehouse Management
+- Supplier Management
 
 ---
 
 # 🚧 Upcoming Modules
 
-- Supplier Management
 - Customer Management
 - Purchase Management
 - Sales Management
@@ -331,8 +331,8 @@ The APIs are tested using:
 | Unit Module        | ✅ Completed   |
 | Tax Module         | ✅ Completed   |
 | WareHouse Module   | ✅ Completed   |
-| Supplier Module    | 🚧 In Progress |
-| Customer Module    | ⏳ Planned     |
+| Supplier Module    | ✅ Completed   |
+| Customer Module    | 🚧 In Progress |
 | Purchase Module    | ⏳ Planned     |
 | Sales Module       | ⏳ Planned     |
 
