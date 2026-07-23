@@ -17,6 +17,8 @@ use App\Interfaces\TaxRepositoryInterface;
 use App\Repositories\TaxRepository;
 use App\Interfaces\WarehouseRepositoryInterface;
 use App\Repositories\WarehouseRepository;
+use App\Repositories\Interfaces\SupplierRepositoryInterface;
+use App\Repositories\Eloquent\SupplierRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -54,6 +56,10 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             WarehouseRepositoryInterface::class,
             WarehouseRepository::class
+        );
+        $this->app->bind(
+            SupplierRepositoryInterface::class,
+            SupplierRepository::class
         );
     }
 

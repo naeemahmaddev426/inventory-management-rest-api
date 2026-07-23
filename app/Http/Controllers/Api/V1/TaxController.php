@@ -12,16 +12,11 @@ use Illuminate\Http\Request;
 
 class TaxController extends Controller
 {
-    protected TaxService $taxService;
-
     /**
      * Constructor
      */
-    public function __construct(TaxService $taxService)
-    {
-        $this->taxService = $taxService;
-    }
-
+    public function __construct(protected TaxService $taxService)
+    {}
     /**
      * Display a listing of taxes.
      */
