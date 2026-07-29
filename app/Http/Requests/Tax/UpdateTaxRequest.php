@@ -29,7 +29,6 @@ class UpdateTaxRequest extends FormRequest
                 'max:100',
                 Rule::unique('taxes', 'name')->ignore($taxId),
             ],
-
             'rate' => [
                 'required',
                 'numeric',
