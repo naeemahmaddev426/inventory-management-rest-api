@@ -43,7 +43,7 @@ class CustomerService
      */
     public function update(Customer $customer, array $data): Customer
     {
-        return $this->customerRepository->update($customer, $data);
+        return $this->customerRepository->update($customer->id, $data);
     }
 
     /**
@@ -51,7 +51,7 @@ class CustomerService
      */
     public function delete(Customer $customer): bool
     {
-        return $this->customerRepository->delete($customer);
+        return $this->customerRepository->delete($customer->id);
     }
 
     /**
