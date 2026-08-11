@@ -58,16 +58,15 @@ The goal of this project is to demonstrate professional Laravel backend architec
 - Tax Management
 - Warehouse Management
 - Supplier Management
+- Customer Management
+- Purchase Management
 
 ---
 
 # 🚧 Upcoming Modules
 
-- Customer Management
-- Purchase Management
-- Sales Management
-- Warehouse Management
 - Stock Management
+- Sales Management
 - Reports
 - Dashboard APIs
 - Notifications
@@ -84,13 +83,13 @@ The goal of this project is to demonstrate professional Laravel backend architec
 | PHP                | 8.4     |
 | MySQL              | 8       |
 | Docker             | Latest  |
-| Laravel Sanctum    | ✔       |
-| REST API           | ✔       |
-| Repository Pattern | ✔       |
-| Service Layer      | ✔       |
-| API Resources      | ✔       |
-| Form Requests      | ✔       |
-| Git & GitHub       | ✔       |
+| Laravel Sanctum    | ✔      |
+| REST API           | ✔      |
+| Repository Pattern | ✔      |
+| Service Layer      | ✔      |
+| API Resources      | ✔      |
+| Form Requests      | ✔      |
+| Git & GitHub       | ✔      |
 
 ---
 
@@ -320,21 +319,22 @@ The APIs are tested using:
 
 # 📈 Project Status
 
-| Module             | Status         |
-| ------------------ | -------------- |
-| Authentication     | ✅ Completed   |
-| Password Reset     | ✅ Completed   |
-| Email Verification | ✅ Completed   |
-| Category CRUD      | ✅ Completed   |
-| Product Module     | ✅ Completed   |
-| Brand Module       | ✅ Completed   |
-| Unit Module        | ✅ Completed   |
-| Tax Module         | ✅ Completed   |
-| WareHouse Module   | ✅ Completed   |
-| Supplier Module    | ✅ Completed   |
-| Customer Module    | 🚧 In Progress |
-| Purchase Module    | ⏳ Planned     |
-| Sales Module       | ⏳ Planned     |
+| Module             | Status            |
+| ------------------ | ----------------- |
+| Authentication     | ✅ Completed      |
+| Password Reset     | ✅ Completed      |
+| Email Verification | ✅ Completed      |
+| Category CRUD      | ✅ Completed      |
+| Product Module     | ✅ Completed      |
+| Brand Module       | ✅ Completed      |
+| Unit Module        | ✅ Completed      |
+| Tax Module         | ✅ Completed      |
+| WareHouse Module   | ✅ Completed     |
+| Supplier Module    | ✅ Completed     |
+| Customer Module    | ✅ Completed     |
+| Purchase Module    | ✅ Completed     |
+| Stock Module       | 🚧 In Progress  |
+| Sales Module       | ⏳ Planned        |
 
 ---
 
