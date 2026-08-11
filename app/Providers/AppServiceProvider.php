@@ -21,6 +21,8 @@ use App\Repositories\Interfaces\SupplierRepositoryInterface;
 use App\Repositories\Eloquent\SupplierRepository;
 use App\Repositories\CustomerRepository;
 use App\Repositories\Interfaces\CustomerRepositoryInterface;
+use App\Repositories\Contracts\PurchaseRepositoryInterface;
+use App\Repositories\PurchaseRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -66,6 +68,10 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             CustomerRepositoryInterface::class,
             CustomerRepository::class
+        );
+        $this->app->bind(
+            PurchaseRepositoryInterface::class,
+            PurchaseRepository::class
         );
     }
 

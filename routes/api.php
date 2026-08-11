@@ -11,6 +11,7 @@ use App\Http\Controllers\Api\V1\TaxController;
 use App\Http\Controllers\Api\V1\WarehouseController;
 use App\Http\Controllers\Api\V1\SupplierController;
 use App\Http\Controllers\Api\V1\CustomerController;
+use App\Http\Controllers\Api\V1\PurchaseController;
 
 Route::prefix('v1')->group(function () {
 
@@ -31,6 +32,7 @@ Route::prefix('v1')->group(function () {
     Route::delete('warehouses/{id}/force-delete', [WarehouseController::class, 'forceDelete']);
     Route::apiResource('suppliers', SupplierController::class);
     Route::apiResource('customers', CustomerController::class);
+    Route::apiResource('purchases', PurchaseController::class);
     Route::middleware('auth:sanctum')->group(function () {
 
         Route::post('/logout', [AuthController::class, 'logout']);

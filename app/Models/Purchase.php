@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Supplier;
+use App\Models\Warehouse;
+use App\Models\PurchaseDetail;
 
 class Purchase extends Model
 {
@@ -59,6 +62,9 @@ class Purchase extends Model
     {
         return $this->belongsTo(Warehouse::class);
     }
-
+    public function purchaseDetails()
+    {
+        return $this->hasMany(PurchaseDetail::class);
+    }
     
 }
