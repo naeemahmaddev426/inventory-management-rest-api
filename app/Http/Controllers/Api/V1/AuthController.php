@@ -23,18 +23,19 @@ class AuthController extends Controller
     public function register(RegisterRequest $request)
     {
         $user = $this->authService->register($request);
-        $user->sendEmailVerificationNotification();
+
+        if (config('auth.require_email_verification', false)) {
+            $user->sendEmailVerificationNotification();
+        }
+
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()->json([
-
             'success' => true,
-
             'message' => 'User registered successfully.',
-
-            'data' => new UserResource($user)
-
-        ],201);
+            'token' => $token,
+            'user' => new UserResource($user),
+        ], 201);
     }
     public function login(LoginRequest $request)
     {

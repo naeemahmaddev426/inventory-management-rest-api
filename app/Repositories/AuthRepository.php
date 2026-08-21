@@ -27,21 +27,17 @@ class AuthRepository implements AuthRepositoryInterface
     public function login(LoginRequest $request)
     {
         $user = User::where('email', $request->email)->first();
-    
-        if (! $user || ! Hash::check($request->password, $user->password)) {
 
+        if (! $user || ! Hash::check($request->password, $user->password)) {
             throw ValidationException::withMessages([
                 'email' => ['Invalid email or password.'],
             ]);
-
         }
 
-        if (! $user->hasVerifiedEmail()) {
-
+        if (config('auth.require_email_verification', false) && ! $user->hasVerifiedEmail()) {
             throw ValidationException::withMessages([
                 'email' => ['Please verify your email address before logging in.'],
             ]);
-
         }
 
         return [

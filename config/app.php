@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('App_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'env' => env('App_ENV', 'production'),
+    'env' => env('APP_ENV', 'production'),
     'frontend_url' => env('FRONTEND_URL'),
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('App_DEBUG', false),
+    'debug' => (bool) env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,12 @@ return [
     |
     */
 
-    'url' => env('App_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://localhost'),
+
+    // URL used by the server-side web dashboard to call this same API
+    // from inside the Docker app container. Do not use localhost here
+    // because it may resolve to IPv6 (::1) while artisan serve listens on IPv4.
+    'internal_api_url' => env('INTERNAL_API_URL', 'http://127.0.0.1:8002'),
 
     /*
     |--------------------------------------------------------------------------
@@ -78,11 +83,11 @@ return [
     |
     */
 
-    'locale' => env('App_LOCALE', 'en'),
+    'locale' => env('APP_LOCALE', 'en'),
 
-    'fallback_locale' => env('App_FALLBACK_LOCALE', 'en'),
+    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
 
-    'faker_locale' => env('App_FAKER_LOCALE', 'en_US'),
+    'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
 
     /*
     |--------------------------------------------------------------------------
@@ -97,11 +102,11 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
-    'key' => env('App_KEY'),
+    'key' => env('APP_KEY'),
 
     'previous_keys' => [
         ...array_filter(
-            explode(',', (string) env('App_PREVIOUS_KEYS', ''))
+            explode(',', (string) env('APP_PREVIOUS_KEYS', ''))
         ),
     ],
 
@@ -119,8 +124,8 @@ return [
     */
 
     'maintenance' => [
-        'driver' => env('App_MAINTENANCE_DRIVER', 'file'),
-        'store' => env('App_MAINTENANCE_STORE', 'database'),
+        'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
+        'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
 ];
